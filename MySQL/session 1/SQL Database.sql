@@ -1,0 +1,26 @@
+SELECT SQRT(4) AS TP
+FROM DUAL;
+
+SELECT ABS(5.51) AS TP
+FROM DUAL;
+
+SELECT CEIL(-6.54) AS TP -- INCREASE VALUE 15.123 = 16, 12.985 = 13, -5.64 = -5, -6.45 = -6
+FROM DUAL;
+
+SELECT FLOOR(-4.65) AS TP -- DECREASE VALUE 156.45 = 156, 15.98 = 15, -43.65 = -44
+FROM DUAL;
+
+SELECT POWER(5, 3) AS TP -- POWER(10, 3) = 1000, POWER(6, 2) = 36
+FROM DUAL;
+
+SELECT REMAINDER(4, 2) AS TP 
+FROM DUAL;
+
+SELECT ROUND(5.645, 2) AS TP -- ROUND --> (5.4567, 3) = 5. 457, (-4.452, 1) = -4.5, (12536.56, -2) = 12500
+FROM DUAL;
+
+SELECT TRUNC(-45.65, 2) AS TP -- TRUNc NEXT NUMBERS --> (56.46, 1) = 56.4, (5461.96, -2) = 5400
+FROM dual;
+
+-- Difference between round and trunc is [round is gone to the nearest number where trunc is tended towards zero]
+-- Ex = TRUNC(12365, -2) = 12300 And ROUND(12365, -2) = 12400

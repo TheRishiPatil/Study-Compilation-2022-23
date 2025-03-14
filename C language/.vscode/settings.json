@@ -1,0 +1,11 @@
+{
+    "editor.mouseWheelZoom": true,
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "files.associations": {
+        "stdio.h": "c",
+        "string.h": "c",
+        "random": "c",
+        "PracticeQ7.C": "cpp"
+    }
+}

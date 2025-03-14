@@ -1,0 +1,35 @@
+/******************************Tag Selector******************************/
+body{
+    background-color:#EAF6F6;
+}
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    border-color: gray;
+    width:10%;
+}
+h1{
+    color: #66BFBF;
+    font-style: italic;
+}
+h3{
+    color: #66BFBF;
+}
+img:hover{
+    background-color: #00ffff;
+}
+/******************************Class Selector******************************/
+.One_Piece{
+    background-color:yellow;
+}
+.luffy{
+    background-color: black;
+}
+.circular{
+    border-radius: 100%;
+}
+/******************************Id Selector******************************/
+#heading{
+    color: green;
+}

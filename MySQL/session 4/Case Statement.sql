@@ -1,0 +1,38 @@
+DEFINE myoption = 'Option A';
+SELECT CASE
+    WHEN '&myOption' = 'Option A' THEN 'First Option'
+    WHEN '&myOption' = 'Option B' THEN 'Second Option'
+    ELSE 'No Option'
+END AS myOptions 
+FROM DUAL;
+
+SELECT CASE '&myOption'
+    WHEN 'Option A' THEN 'First Option'
+    WHEN 'Option B' THEN 'Second Option'
+    ELSE 'No Option'
+END AS myOptions 
+FROM DUAL;
+
+SELECT CASE '&myOption'
+    WHEN 'Option A' THEN CAST(1 AS VARCHAR2(10)) --> CHANGED THE DATA TYPE FROM NUMBER TO STRING
+    WHEN 'Option B' THEN 'Second Option'
+    ELSE 'No Option'
+END AS myOptions 
+FROM DUAL;
+
+
+SELECT EMPLOYEE_GOVERNMENT_ID, EMPLOYEE_NUMBER, CASE SUBSTR(EMPLOYEE_GOVERNMENT_ID, 1, 1)
+    WHEN 'A' THEN EMPLOYEE_FIRST_NAME
+    WHEN 'B' THEN EMPLOYEE_LAST_NAME
+    ELSE NULL
+    END || '.' AS HEHE
+FROM TBL_EMPLOYEE
+ORDER BY EMPLOYEE_GOVERNMENT_ID;
+
+SELECT EMPLOYEE_GOVERNMENT_ID, EMPLOYEE_NUMBER
+, CASE  WHEN SUBSTR(EMPLOYEE_GOVERNMENT_ID, 1, 1) = 'A' THEN 'Letter A'
+        WHEN EMPLOYEE_NUMBER < 200 THEN 'Less Than 200'
+        ELSE 'Neither Option'
+    END || '.' AS HEHE
+FROM TBL_EMPLOYEE
+ORDER BY EMPLOYEE_NUMBER;
